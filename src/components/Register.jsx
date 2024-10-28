@@ -15,7 +15,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/user/register', { email, password });
+      const response = await axios.post('https://ia03-be.vercel.app/user/register', { email, password });
       setMessage(response.data.message);
     } catch (error) {
       if (error.response && error.response.data) {
